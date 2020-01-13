@@ -33,6 +33,8 @@ import FaqElement from "./src/views/FaqElement";
 import Success from "./src/views/Success";
 import EvaluationFeedback from './src/views/EvaluationFeedback';
 
+import Pusher from 'pusher-js/react-native';
+
 class Home extends Component {
   state = {
     logging: "false"
@@ -44,6 +46,19 @@ class Home extends Component {
 
   componentDidMount() {
     this.retrieveData();
+
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('8608bc96717dc55b1d8d', {
+      cluster: 'us2',
+      forceTLS: true
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      alert(JSON.stringify(data));
+      console.log(JSON.stringify(data));
+    });
   }
 
   static navigationOptions = {
