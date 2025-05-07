@@ -30,4 +30,4 @@ Links
 * Code: https://github.com/ntsma/sofia
 * Issue tracker: https://github.com/ntsma/sofia/issues
 * Test status: 
-* Official chat: https://chat.whatsapp.com/Kr3tVW4EOYi8SMHxLrLjS9
+* Official chat: https://chat.whatsapp.com/Kr3tVW4EOYi8SMHxLrLjS9 
